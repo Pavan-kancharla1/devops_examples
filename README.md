@@ -39,7 +39,9 @@ If Windows is unable to find the program, you might need to close and reopen the
  	subnet-ID:
   # or to run with default configuration 
    $ aws ec2 run-instances --image-id ami-xxxxxxxxxxxxxxxxx --instance-type t2.micro --region us-east-1
+   
   Ex: aws ec2 run-instances --image-id ami-04b4f1a9cf54c11d0 --instance-type t2.micro --key-name ec2key --region us-east-1
+  
   Note: make sure you are connecting instance from the folder where private key available
 
 #  Congratulations you have succesfully launched an EC2 instance.
