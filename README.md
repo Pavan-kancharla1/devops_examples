@@ -26,7 +26,7 @@ If Windows is unable to find the program, you might need to close and reopen the
 
 # C. Launch new EC2 instance
 	Go to AWS CLI documentation & get the required data to launch new EC2 instance
-# $ aws ec2 run-instances --image-id ami-xxxxxxxx --count 1 --instance-type t2.micro --key-name MyKeyPair --security-group-ids sg-903004f8 --subnet-id subnet-6e7f829e
+ $ aws ec2 run-instances --image-id ami-xxxxxxxx --count 1 --instance-type t2.micro --key-name MyKeyPair --security-group-ids sg-903004f8 --subnet-id subnet-6e7f829e
  	
   	AMI-ID : Ubuntu 24:04 ami-04b4f1a9cf54c11d0
   	Instance type: t2.micro
