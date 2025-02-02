@@ -25,6 +25,28 @@ If Windows is unable to find the program, you might need to close and reopen the
      you can test using any aws cli commamd
 
 # C. Launch new EC2 instance
+	Go to AWS CLI documentation & get the required data to launch new EC2 instance
+# $ aws ec2 run-instances --image-id ami-xxxxxxxx --count 1 --instance-type t2.micro --key-name MyKeyPair --security-group-ids sg-903004f8 --subnet-id subnet-6e7f829e
+ 	
+  	AMI-ID : Ubuntu 24:04 ami-04b4f1a9cf54c11d0
+  	Instance type: t2.micro
+   	vpc: vpc-049d7bb2e029dc1af
+    	Key pair: create new key pair using cli
+     			$ aws ec2 create-key-pair --key-name MyKeyPair --query 'KeyMaterial' --output text > MyKeyPair.pem
+				Explanation:--key-name MyKeyPair → Specifies the name of the key pair. Change MyKeyPair as needed.
+    					--query 'KeyMaterial' --output text > MyKeyPair.pem → Saves the private key to a .pem file.
+	Security-group-ID:
+ 	subnet-ID:
+  # or to run with default configuration 
+  # $ aws ec2 run-instances --image-id ami-xxxxxxxxxxxxxxxxx --instance-type t2.micro --region us-east-1
+  Ex: aws ec2 run-instances --image-id ami-04b4f1a9cf54c11d0 --instance-type t2.micro --key-name ec2key --region us-east-1
+  Note: make sure you are connecting instance from the folder where private key available
+
+#  Congratulations you have succesfully launched an EC2 instance.
+  
+
+    	
+  	
 
 
    
